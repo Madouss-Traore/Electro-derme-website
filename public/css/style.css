@@ -175,7 +175,7 @@ html, body{
 
 /* WELCOME */
 
-.welcoming__title, .journey__title {
+.welcoming__title, .journey__title,.before-after__title {
 
     color: var(--brown-dark);
     margin: 44px 0 32px;
@@ -272,6 +272,36 @@ html, body{
 }
 
 
+/* AVANT/APRES */
+
+ .before-after__title{
+  text-align: left;
+  margin: 30px 40px 32px;
+}
+
+.swiper {
+  width: 650px;
+  height: 450px;
+}
+
+.swiper-slide{
+    text-align: center;
+    justify-content: center;
+    margin-bottom: px;
+    
+}
+
+.swiper-pagination{
+    margin-top: 6px;
+}
+
+.swiper .swiper-button-prev{
+    color:var(--brown-light);
+}
+
+.swiper .swiper-button-next{
+    color: var(--brown-light);
+}
 
 
 
