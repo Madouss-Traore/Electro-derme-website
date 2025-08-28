@@ -8,8 +8,9 @@
     --greyish-beige:#F8F7F3; 
     --white:#ffffff; 
     --text-color: var(--brown-dark);  
-    --surface-bg-color: var(--greyish-beige); 
+    --header-footer-bg: var(--greyish-beige); 
     --bg-color:var(--white); 
+    --text-on-dark:var(--white);
 
 }
 
@@ -33,3 +34,58 @@ html, body{
 }
 
 
+/* NAVBAR */
+
+.navbar__container{
+    align-items:center ;
+    background-color: var(--header-footer-bg);
+    height: 45px;
+}
+
+.navbar{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 44px;
+    padding:12px;
+    background-color: var(--color-bg);
+}
+
+.navbar__list{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    gap:2rem;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 400;
+    cursor: pointer;
+    padding-left: 12px;
+}
+
+.navbar__item:hover{
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.navbar__button-appointment{
+    align-items: center;
+    border: none;
+    border-radius: 6px;
+    height:30px;
+    width: 130px;
+    background-color: var(--brown-darkest);
+    color: var(--text-on-dark);
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.navbar__a {
+    display: block;
+    padding: 10px 20px;
+
+}
