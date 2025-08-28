@@ -165,7 +165,7 @@ html, body{
 
 /* WELCOME */
 
-.welcoming__title {
+.welcoming__title, .journey__title {
 
     color: var(--brown-dark);
     margin: 44px 0 32px;
@@ -185,3 +185,49 @@ html, body{
     line-height: 28px;
     text-align: center;
 }
+
+
+/* JOURNEY */
+
+.journey {
+    display: flex;
+    justify-content: center; 
+    align-items: center;         
+    margin: 150px 200px 0 200px; 
+    gap: 40px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.journey__photo {
+    background-image: url(/assets/images/parcours.png);
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;       
+    background-size: cover;
+    background-position: center;
+}
+
+.journey__title{
+    text-align: left;
+    margin-top: 10px;
+}
+
+.journey__details {
+    flex: 1; /* prend le reste de la place */
+}
+
+.journey__text {
+    text-align: left;
+    letter-spacing: 0.25px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 0;               
+}
+.accent{
+    font-weight: bold;
+}
+
+   
