@@ -7,12 +7,22 @@
     --brown-darkest: #24150E;
     --greyish-beige:#F8F7F3; 
     --white:#ffffff; 
-    --text-color: var(--brown-dark);  
+    --text-color: var(--brown-darkest);  
     --header-footer-bg: var(--greyish-beige); 
+    --slogan-bg: var(--greyish-beige); 
     --bg-color:var(--white); 
     --text-on-dark:var(--white);
     --button-light:var(--beige-light);
 
+}
+
+@keyframes moveRightToLeft {
+    0% {
+        transform: translateX(100%); /* Commence à droite, hors de l'écran */
+    }
+    100% {
+        transform: translateX(-100%); /* Se déplace complètement à gauche */
+    }
 }
 
 body {
@@ -229,5 +239,40 @@ html, body{
 .accent{
     font-weight: bold;
 }
+
+
+/* SLOGAN */
+
+.slogan__container {
+    width: 100%; 
+    background-color: var(--slogan-bg);
+    height: 65px; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    position: relative;
+    margin-top: 25px;
+    line-height: 33.25px;
+    overflow: hidden;
+}
+
+.slogan__text {
+    display: flex;
+    animation: moveRightToLeft 50s linear infinite; 
+}
+
+.slogan__item {
+    white-space: nowrap; /* Empêche le texte de passer sur plusieurs lignes */
+    font-size: 25px;
+    color: var(--text-color);
+    padding-right: 75px; 
+    display: inline-block;
+    line-height: 33.25px;
+    padding: 20px;
+}
+
+
+
+
 
    
