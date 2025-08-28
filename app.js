@@ -2,6 +2,7 @@ import "dotenv/config";
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
+import expressLayouts from "express-ejs-layouts";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -11,14 +12,16 @@ const PORT = process.env.PORT;
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+app.set("layout", "layout"); 
 
 
 app.use(express.static('./public'));
+app.use(expressLayouts);
 
 
 // ROUTES
 app.get('/', (req, res) => {
-    res.render('pages/home');
+    res.render('pages/home', { title: 'Electro Derme'});
 });
 
 app.get('/electrolyse', (req, res) => {
