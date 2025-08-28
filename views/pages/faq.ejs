@@ -1,0 +1,30 @@
+<section>
+  <h2 class="faq__title">Foire aux questions</h2>
+</section>
+
+<section class="faq__container">
+
+  <section class="video-container">
+    <video class="faq-video" autoplay muted loop>
+      <source src="/assets/videos/consult.mp4" type="video/mp4">
+    </video>
+    <button id="videoToggle" class="video-button">⏸</button>
+  </section>
+
+  <% faqs.forEach(faq => { %>
+    <div class="faq">
+      <div class="question">
+        <h3><%= faq.question %></h3>
+        <svg class="svg" width="15" height="10" viewBox="0 0 42 25">
+          <path d="M3 3L21 21L39 3" stroke-width="7" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="answer">
+        <section class="answer-content">
+          <%- faq.answer %>
+        </section>
+      </div>
+    </div>
+  <% }) %>
+
+</section>
