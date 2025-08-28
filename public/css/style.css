@@ -11,6 +11,7 @@
     --header-footer-bg: var(--greyish-beige); 
     --bg-color:var(--white); 
     --text-on-dark:var(--white);
+    --button-light:var(--beige-light);
 
 }
 
@@ -88,6 +89,53 @@ html, body{
     display: block;
     padding: 10px 20px;
 
+}
+
+
+/* HERO */
+
+.hero {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:95vh;
+    width: 100%;
+    background-image: url(/assets/images/hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero__title, .hero__subtitle {
+    color: var(--text-on-dark);
+    letter-spacing: 1px;
+
+}
+
+.hero__title{
+    font-size: 5em;
+    font-weight: bold;
+    margin-top: 137px;
+}
+
+.hero__subtitle{
+    font-size: 2.5rem;
+    font-weight: lighter;
+}
+
+.hero__button{
+    margin-top: 50px;
+    border: none;
+    border-radius: 12px;
+    height:40px;
+    width: 200px;
+    background-color: var(--button-light);
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 
