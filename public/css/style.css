@@ -139,6 +139,7 @@ html, body{
 }
 
 
+
   /* FOOTER */
 
   .footer {
@@ -160,4 +161,27 @@ html, body{
 
 .brand{
     font-size: 13px;
+}
+
+/* WELCOME */
+
+.welcoming__title {
+
+    color: var(--brown-dark);
+    margin: 44px 0 32px;
+    font-size: 36.8px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.welcoming__briefing {
+    margin-left: 200px;
+    margin-right:200px;
+    margin-top:25px;
+    letter-spacing: 0.25px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: center;
 }
