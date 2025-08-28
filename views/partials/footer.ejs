@@ -2,11 +2,11 @@
   <script type="text/javascript" src="https://booksy.com/widget/code.js?id=56453&country=fr&lang=fr"></script>
   <section>
     <a href="https://www.instagram.com/electro.derme/">
-      <img src="/assets/images/instagram.png" alt="Ma page instagram" />
+      <img class="socials__a insta" src="/assets/images/instagram.png" alt="Ma page instagram" />
     </a>
 
     <a href="https://www.tiktok.com/@electro.derme">
-      <img class="socials__a insta" src="/assets/images/tiktok.png" alt="Mon TikTok" />
+      <img class="socials__a tiktok" src="/assets/images/tiktok.png" alt="Mon TikTok" />
     </a>
 
     <a href="https://booksy.com/fr-fr/56453_electro-derme_instituts-de-beaute_100088_argenteuil#ba_s=seo">
@@ -33,3 +33,22 @@ new Swiper('.swiper-before-after', {
     clickable: true,
     },
   });
+
+
+
+// videos swiper (FAQ)
+  new Swiper('.swiper-faq-videos', {
+    loop: true,
+    centeredSlides: true,
+    slidesPerView: 3,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.swiper-faq-next',
+      prevEl: '.swiper-faq-prev',
+    },
+    pagination: {
+      el: '.swiper-faq-pagination',
+      clickable: true,
+    },
+  });
+</script>

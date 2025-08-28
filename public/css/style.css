@@ -89,3 +89,27 @@ html, body{
     padding: 10px 20px;
 
 }
+
+
+  /* FOOTER */
+
+  .footer {
+    font-size: 0.9rem;
+    padding: 1rem 0.5rem;
+    background: var(--greyish-beige);
+    color: var(--brown-darkest);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 16px;
+  }
+
+  .socials__a{
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    margin-bottom: 6px;
+}
+
+.brand{
+    font-size: 13px;
+}
