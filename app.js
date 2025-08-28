@@ -39,7 +39,6 @@ app.get('/faq', (req, res) => {
 
 
 
-
 // PORT 
 app.listen(PORT, () => {
     console.log(`Server running on port : ${PORT}, url: http://localhost:${PORT}`)
