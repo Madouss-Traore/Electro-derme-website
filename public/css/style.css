@@ -1,0 +1,35 @@
+:root {
+    --brown-light: #856D55;
+    --brown-dark: #5A3E28;
+    /* --beige-light: #B3A28E; */
+    --beige-light:#F5EDE2;
+    /* --beige-light:#D9D0C6; */
+    --brown-darkest: #24150E;
+    --greyish-beige:#F8F7F3; 
+    --white:#ffffff; 
+    --text-color: var(--brown-dark);  
+    --surface-bg-color: var(--greyish-beige); 
+    --bg-color:var(--white); 
+
+}
+
+body {
+  padding: 0; 
+  font-family: "Abhaya Libre", serif;
+  color: var(--brown-darkest); 
+  background-color: var(--bg-color); 
+  line-height: 1.6; 
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+/* CONTENT  */
+
+.content {
+  flex: 1; /* pousse le footer en bas */
+}
+
+
