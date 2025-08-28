@@ -25,19 +25,19 @@ app.get('/', (req, res) => {
 });
 
 app.get('/electrolyse', (req, res) => {
-    res.render('pages/electrolysis');
+    res.render('pages/electrolysis', { title: `l'Electrolyse`});
 });
 
 app.get('/tarifs', (req, res) => {
-    res.render('pages/pricing');
+    res.render('pages/pricing', { title: 'Tarifs'});
 });
 
 app.get('/contact', (req, res) => {
-    res.render('pages/contact');
+    res.render('pages/contact', { title: 'Contact'});
 });
 
 app.get('/faq', (req, res) => {
-    res.render('pages/faq');
+    res.render('pages/faq', { title: 'FAQ'});
 });
 
 
