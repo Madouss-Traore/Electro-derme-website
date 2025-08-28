@@ -18,3 +18,27 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
+
+
+//initialize swiper comments
+
+const reviewsSwiper = new Swiper('.reviews', {
+  // Optional parameters
+
+  loop: true, 
+   spaceBetween: 30,  
+  slidesPerView: 3,
+
+  // If we need pagination
+  pagination: {
+    el: '.reviews__swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.reviews__swiper-button-next',
+    prevEl: '.reviews__swiper-button-prev',
+  },
+
+});
+
