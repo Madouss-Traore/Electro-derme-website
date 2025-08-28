@@ -1,0 +1,57 @@
+<section class="pricing__container">
+
+  <h2 class="pricing__title">Tarifs</h2>
+
+  <!-- Table visite préalable -->
+  <table class="pricing-table first-visit">
+    <thead class="header">
+      <tr>
+        <th class="row__width alignl th__title">Visite préalable</th>
+        <th class="row__width alignr">Prix</th>
+      </tr>
+      <tr>
+        <th colspan="2" class="session-details alignl">
+          Obligatoire lors de votre première visite.
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% firstVisit.forEach(firstVisit => { %>
+        <tr>
+          <td class="row__width"><%= firstVisit.durationDisplayed %></td>
+          <td class="row__width">
+            <div class="session-price alignr"><%= firstVisit.price %></div>
+            <div class="session-note alignr">Gratuit si suivi d'une séance</div>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+
+  <!-- Table séances -->
+  <table class="pricing-table sessions-table">
+    <thead class="header">
+      <tr>
+        <th class="row__width alignl th-session-title">Séance</th>
+        <th class="row__width alignr">Prix</th>
+      </tr>
+      <tr>
+        <th colspan="2" class="session-details alignl">
+          La "durée totale" comprend : l'installation, la séance selon la durée choisie et les soins post traitement.
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% sessions.forEach(session => { %>
+        <tr>
+          <td class="row__width alignl"><%= session.durationDisplayed %></td>
+          <td class="row__width">
+            <div class="session-price alignr"><%= session.price %></div>
+            <div class="session-note alignr">Durée totale : <%= session.total %></div>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+
+</section>
