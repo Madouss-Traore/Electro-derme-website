@@ -65,28 +65,6 @@ const sessions = [
     
 ];
 
-
-// ROUTES
-app.get('/', (req, res) => {
-    res.render('pages/home', { title: 'Electro Derme'});
-});
-
-app.get('/electrolyse', (req, res) => {
-    res.render('pages/electrolysis', { title: `l'Electrolyse`});
-});
-
-app.get('/tarifs', (req, res) => {
-    res.render('pages/pricing', { title: 'Tarifs',sessions:sessions, firstVisit:firstVisit});
-});
-
-app.get('/contact', (req, res) => {
-    res.render('pages/contact', { title: 'Contact'});
-});
-
-app.get('/faq', (req, res) => {
-    res.render('pages/faq', { title: 'FAQ', faqs});
-});
-
 // FAQS
 const faqs = [ 
   {
@@ -193,6 +171,30 @@ const faqs = [
     `
   }
 ];
+
+
+// ROUTES
+app.get('/', (req, res) => {
+    res.render('pages/home', { title: 'Electro Derme'});
+});
+
+app.get('/electrolyse', (req, res) => {
+    res.render('pages/electrolysis', { title: `l'Electrolyse`});
+});
+
+app.get('/tarifs', (req, res) => {
+    res.render('pages/pricing', { title: 'Tarifs',sessions:sessions, firstVisit:firstVisit});
+});
+
+app.get('/contact', (req, res) => {
+    res.render('pages/contact', { title: 'Contact'});
+});
+
+app.get('/faq', (req, res) => {
+    res.render('pages/faq', { title: 'FAQ', faqs});
+});
+
+
 
 
 // PORT 
