@@ -16,3 +16,20 @@
 
   <p class="brand">© Electro Derme <%= new Date().getFullYear() %></p>
 </footer>
+
+<!-- Scripts généraux -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+
+// before/after swiper (Home)
+new Swiper('.swiper-before-after', {
+    loop: true,
+    navigation: {
+    nextEl: '.swiper-before-after-next',
+    prevEl: '.swiper-before-after-prev',
+    },
+    pagination: {
+    el: '.swiper-before-after-pagination',
+    clickable: true,
+    },
+  });
