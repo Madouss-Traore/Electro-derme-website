@@ -691,3 +691,35 @@ svg{
     text-align: center;
     justify-content:center ;
 }
+
+/* 404 */
+
+.error-message__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.error-message__title{
+    font-size: 1.5em;
+    color: var(--subtitle-color);
+
+}
+
+.error__text{
+    color: var(--text-color);
+    margin: 44px 0 32px;
+    font-size: 36.8px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.return__link{
+    color: var(--text-color);
+    margin-top: 16px;
+    font-size: 1.8em;
+    text-decoration: underline;
+}

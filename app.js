@@ -202,6 +202,10 @@ app.get('/faq', (req, res) => {
     res.render('pages/faq', { title: 'FAQ', faqs});
 });
 
+// Toutes les routes non reconnues passent ici
+app.use((req, res) => {
+  res.status(404).render("pages/404", { title: "Page non trouvée" });
+});
 
 
 
