@@ -3,14 +3,14 @@
   <h2 class="pricing__title">Tarifs</h2>
 
   <!-- Table visite préalable -->
-  <table class="pricing-table first-visit">
-    <thead class="header">
+  <table class="pricing__table ">
+    <thead class="princing__table-header">
       <tr>
-        <th class="row__width alignl th__title">Visite préalable</th>
+        <th class="row__width alignl pricing__th">Visite préalable</th>
         <th class="row__width alignr">Prix</th>
       </tr>
       <tr>
-        <th colspan="2" class="session-details alignl">
+        <th colspan="2" class=" alignl">
           Obligatoire lors de votre première visite.
         </th>
       </tr>
@@ -20,8 +20,8 @@
         <tr>
           <td class="row__width"><%= firstVisit.durationDisplayed %></td>
           <td class="row__width">
-            <div class="session-price alignr"><%= firstVisit.price %></div>
-            <div class="session-note alignr">Gratuit si suivi d'une séance</div>
+            <div class="pricing__session-price alignr"><%= firstVisit.price %></div>
+            <div class="pricing__session-note alignr">Gratuit si suivi d'une séance</div>
           </td>
         </tr>
       <% }) %>
@@ -29,14 +29,14 @@
   </table>
 
   <!-- Table séances -->
-  <table class="pricing-table sessions-table">
-    <thead class="header">
+  <table class="pricing__table sessions-table">
+    <thead class="princing__table-header">
       <tr>
-        <th class="row__width alignl th-session-title">Séance</th>
+        <th class="row__width alignl session__th">Séance</th>
         <th class="row__width alignr">Prix</th>
       </tr>
       <tr>
-        <th colspan="2" class="session-details alignl">
+        <th colspan="2" class="pricing__session-details alignl">
           La "durée totale" comprend : l'installation, la séance selon la durée choisie et les soins post traitement.
         </th>
       </tr>
@@ -46,8 +46,8 @@
         <tr>
           <td class="row__width alignl"><%= session.durationDisplayed %></td>
           <td class="row__width">
-            <div class="session-price alignr"><%= session.price %></div>
-            <div class="session-note alignr">Durée totale : <%= session.total %></div>
+            <div class="pricing__session-price alignr"><%= session.price %></div>
+            <div class="pricing__session-note alignr">Durée totale : <%= session.total %></div>
           </td>
         </tr>
       <% }) %>

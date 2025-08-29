@@ -8,6 +8,7 @@
     --greyish-beige:#F8F7F3; 
     --white:#ffffff; 
     --light-black:#0000001a;
+    --light-grey:#666;
     --text-color: var(--brown-darkest);  
     --header-footer-bg: var(--greyish-beige); 
     --slogan-bg: var(--greyish-beige); 
@@ -18,7 +19,7 @@
     --subtitle-color:var(--brown-dark);
     --accent-color:var(--brown-light);
     --dark--buttons:var(--brown-darkest);
-
+    --light-info:var
 }
 
 @keyframes moveRightToLeft {
@@ -180,7 +181,7 @@ html, body{
 
 /* WELCOME */
 
-.welcoming__title, .journey__title,.before-after__title, .reviews__title, .electrolysis__main-title {
+.welcoming__title, .journey__title,.before-after__title, .reviews__title, .electrolysis__main-title, .pricing__title {
 
     color: var(--brown-dark);
     margin: 44px 0 32px;
@@ -429,4 +430,64 @@ html, body{
     letter-spacing: 1px;
     color: var(--text-on-dark);
     
+}
+
+/* PRICING */
+
+.pricing__container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.pricing__table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 3rem;
+}
+
+.princing__table-header {
+  font-weight: bold;
+  padding: 0.75rem 0;
+  border-bottom: 2px solid var(--accent-color); 
+}
+
+.pricing__th, .session__th {
+  color: var(--brown-dark);
+  font-size: 22.5px;
+  margin-top: 16px;
+  font-weight: bold;
+}
+
+.pricing__table td {
+  padding: 1rem 0;
+  border-bottom: .5px solid var(--accent-color); 
+}
+
+.pricing__table tbody tr:last-child td {
+  border-bottom: none; 
+}
+
+.alignr {
+  text-align: end;
+}
+
+.alignl{
+    text-align: left;
+}
+
+.pricing__session-price {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.pricing__session-note {
+  font-size: 0.85rem;
+  color: var(--light-info);
+  margin-top: 0.25rem;
+}
+
+.pricing__session-details{
+    padding-top: 6px;
+    font-size: 14px;
 }
