@@ -7,12 +7,14 @@
     --brown-darkest: #24150E;
     --greyish-beige:#F8F7F3; 
     --white:#ffffff; 
+    --light-black:#0000001a;
     --text-color: var(--brown-darkest);  
     --header-footer-bg: var(--greyish-beige); 
     --slogan-bg: var(--greyish-beige); 
     --bg-color:var(--white); 
     --text-on-dark:var(--white);
     --button-light:var(--beige-light);
+    --box-shadow:var(--light-black);
 
 }
 
@@ -175,7 +177,7 @@ html, body{
 
 /* WELCOME */
 
-.welcoming__title, .journey__title,.before-after__title {
+.welcoming__title, .journey__title,.before-after__title, .reviews__title {
 
     color: var(--brown-dark);
     margin: 44px 0 32px;
@@ -280,7 +282,7 @@ html, body{
 }
 
 .swiper {
-  width: 650px;
+  width: 800px;
   height: 450px;
 }
 
@@ -303,6 +305,81 @@ html, body{
     color: var(--brown-light);
 }
 
+ 
+/* Reviews */
 
+.reviews {
+    height: auto;
+    
+}
 
-   
+.reviews__container{
+    height: 50vh;
+    margin: 40px auto;               
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: flex-start;
+    height: 600px;
+}
+
+.reviews__title {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: left;
+    margin-left: 55px;
+}
+
+.reviews__row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-items: center;          
+    width: 100%;
+}
+
+.reviews__swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.swiper .swiper-slide .review-card{
+    margin : 3em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review-card {
+    background:var(--bg-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 2px var(--box-shadow);
+    padding: 16px;
+    text-align: center;
+    height: 300px;
+}
+
+.review-rating {
+    font-size: 1.5rem;
+    color: var(--brown-light);
+    margin-bottom: 8px;
+}
+
+.review-comment {
+    width: 80%;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.review-author {
+    font-weight: bold;
+    color: #856D55;
+}
+

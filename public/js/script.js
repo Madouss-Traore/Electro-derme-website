@@ -26,13 +26,8 @@ const reviewsSwiper = new Swiper('.reviews', {
   // Optional parameters
 
   loop: true, 
-   spaceBetween: 30,  
+   spaceBetween: 9,  
   slidesPerView: 3,
-
-  // If we need pagination
-  pagination: {
-    el: '.reviews__swiper-pagination',
-  },
 
   // Navigation arrows
   navigation: {
