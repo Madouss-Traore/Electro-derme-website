@@ -25,7 +25,8 @@ const swiper = new Swiper('.swiper', {
 const reviewsSwiper = new Swiper('.reviews', {
   loop: true,
   spaceBetween: 9,
-  slidesPerView: 3,  // par défaut 3 cartes visibles (desktop)
+  slidesPerView: 3, 
+  centerSlides: "auto",
 
 
 
@@ -36,11 +37,11 @@ const reviewsSwiper = new Swiper('.reviews', {
 
   breakpoints: {
     100: {
-      slidesPerView: 1,  // 1 carte visible pour tous les écrans jusqu'à 767px
+      slidesPerView: 1,  
       spaceBetween: 3,
     },
     1100: {
-      slidesPerView: 3,  // 3 cartes visibles à partir de 768px
+      slidesPerView: 3,  
       spaceBetween: 9,
     },
   },
