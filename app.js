@@ -173,13 +173,21 @@ const faqs = [
 ];
 
 
+// MIDDLEWARE CASSE
+
+app.use((req, res, next) => {
+  req.url = req.url.toLowerCase();
+  next();
+});
+
+
 // ROUTES
 app.get('/', (req, res) => {
     res.render('pages/home', { title: 'Electro Derme'});
 });
 
 app.get('/electrolyse', (req, res) => {
-    res.render('pages/electrolysis', { title: `l'Electrolyse`});
+    res.render('pages/electrolysis', { title: `Electrolyse`});
 });
 
 app.get('/tarifs', (req, res) => {
