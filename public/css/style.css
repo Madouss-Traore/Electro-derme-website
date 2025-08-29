@@ -15,6 +15,9 @@
     --text-on-dark:var(--white);
     --button-light:var(--beige-light);
     --box-shadow:var(--light-black);
+    --subtitle-color:var(--brown-dark);
+    --accent-color:var(--brown-light);
+    --dark--buttons:var(--brown-darkest);
 
 }
 
@@ -177,7 +180,7 @@ html, body{
 
 /* WELCOME */
 
-.welcoming__title, .journey__title,.before-after__title, .reviews__title {
+.welcoming__title, .journey__title,.before-after__title, .reviews__title, .electrolysis__main-title {
 
     color: var(--brown-dark);
     margin: 44px 0 32px;
@@ -380,6 +383,50 @@ html, body{
 
 .review-author {
     font-weight: bold;
-    color: #856D55;
+    color:var(--accent-color);
 }
 
+
+/* ELECTROLYSIS */
+
+.electrolysis__container{
+    margin: 0px 100px 0px;
+}
+
+.electrolysis__subtitle{
+    color: var(--subtitle-color);
+    font-size: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    letter-spacing: 1px;
+}
+
+.electrolysis-presentation__text{
+    letter-spacing: 1px;
+    line-height: 30px; 
+    font-size: 16px;
+    margin-bottom: 26px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.electrolysis__btn-container{
+    justify-content: center;
+    text-align: center;
+}
+
+.electrolysis__button{
+    margin-top: 25px;
+    border: none;
+    border-radius: 10px;
+    height:40px;
+    width: 200px;
+    background-color: var(--dark--buttons);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--text-on-dark);
+    
+}
