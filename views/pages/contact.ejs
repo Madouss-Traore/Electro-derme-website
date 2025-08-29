@@ -6,42 +6,44 @@
   <p>✉️ Email : <a href="mailto:electroderme@gmail.com">electroderme@gmail.com</a></p>
 </section>
 
-<h4 class="horaires__title">Horaires</h4>
-
 <section class="contact__container">
 
-  <!-- Card avec les horaires -->
-  <div class="card">
-    <%
-      const weekDays = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
-      const today = new Date();
-      const currentDay = weekDays[today.getDay()];
+  <!-- Bloc Horaires -->
+  <div class="opening-hours-block">
+    <h4 class="opening-hour__title">Horaires</h4>
 
-      const openingHours = [
-        { day: 'Lundi', openingHour: '9h - 18h' },
-        { day: 'Mardi', openingHour: '9h - 18h' },
-        { day: 'Mercredi', openingHour: '9h - 18h' },
-        { day: 'Jeudi', openingHour: '9h - 18h' },
-        { day: 'Vendredi', openingHour: '9h - 18h' },
-        { day: 'Samedi', openingHour: '10h - 16h' },
-        { day: 'Dimanche', openingHour: 'Fermé' }
-      ];
+    <div class="opening-hour__card">
+      <%
+        const weekDays = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+        const today = new Date();
+        const currentDay = weekDays[today.getDay()];
 
-      openingHours.forEach(openingHour => {
-    %>
-      <section class="lineday">
-        <% if (openingHour.day === currentDay) { %>
-          <span class="aujd"><%= openingHour.day %></span>
-          <span class="aujd"><%= openingHour.openingHour %></span>
-        <% } else { %>
-          <span class="other-day"><%= openingHour.day %></span>
-          <span class="other-day"><%= openingHour.openingHour %></span>
-        <% } %>
-      </section>
-    <% }); %>
+        const openingHours = [
+          { day: 'Lundi', openingHour: '9h - 19h' },
+          { day: 'Mardi', openingHour: 'Fermé' },
+          { day: 'Mercredi', openingHour: 'Fermé' },
+          { day: 'Jeudi', openingHour: '9h - 19h' },
+          { day: 'Vendredi', openingHour: '9h - 19h' },
+          { day: 'Samedi', openingHour: '9h - 19h' },
+          { day: 'Dimanche', openingHour: '9h - 19h' }
+        ];
+
+        openingHours.forEach(openingHour => {
+      %>
+        <section class="opening-hour__day">
+          <% if (openingHour.day === currentDay) { %>
+            <span class="today"><%= openingHour.day %></span>
+            <span class="today"><%= openingHour.openingHour %></span>
+          <% } else { %>
+            <span class="other-day"><%= openingHour.day %></span>
+            <span class="other-day"><%= openingHour.openingHour %></span>
+          <% } %>
+        </section>
+      <% }); %>
+    </div>
   </div>
 
-  <!-- Map  -->
+  <!-- Map -->
   <section class="map">
     <iframe 
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2619.9176762600564!2d2.231895275967597!3d48.95505339389977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6668bf66deb37%3A0x4e5adf486b0b3734!2s34%20Rue%20de%20la%20Folie%2C%2095100%20Argenteuil!5e0!3m2!1sfr!2sfr!4v1756055680119!5m2!1sfr!2sfr" 
@@ -55,3 +57,7 @@
   </section>
 
 </section>
+
+<p class="contact__details">
+  Des séances nocturnes sont disponibles uniquement pour les clientes habituelles, les réservations se font directement par message avec moi.
+</p>

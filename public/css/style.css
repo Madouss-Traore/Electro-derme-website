@@ -9,6 +9,8 @@
     --white:#ffffff; 
     --light-black:#0000001a;
     --light-grey:#666;
+    --lighter-grey:#ccc;
+    --light-black:#00000033;
     --text-color: var(--brown-darkest);  
     --header-footer-bg: var(--greyish-beige); 
     --slogan-bg: var(--greyish-beige); 
@@ -21,6 +23,8 @@
     --dark--buttons:var(--brown-darkest);
     --light-info:var(--light-grey);
     --faq-answers:var(--greyish-beige);
+    --table-shadow:var(--light-black);
+    --background-color:var(--white);
 }
 
 @keyframes moveRightToLeft {
@@ -182,7 +186,7 @@ html, body{
 
 /* WELCOME */
 
-.welcoming__title, .journey__title,.before-after__title, .reviews__title, .electrolysis__main-title, .pricing__title, .faq__title {
+.welcoming__title, .journey__title,.before-after__title, .reviews__title, .electrolysis__main-title, .pricing__title, .faq__title, .contact__title {
 
     color: var(--brown-dark);
     margin: 44px 0 32px;
@@ -593,3 +597,97 @@ svg{
     font-weight: bold;
 }
 
+/* CONTACT */
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.contact-info a {
+    color:var(--subtitle-color);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.opening-hour__title{
+
+  margin-bottom: 16px;
+  color: var(--brown-darkest);
+  font-size: 24px;
+  font-weight: bold;
+  text-align:center;
+}
+
+.contact__container{
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+
+.opening-hours-block {
+  display: flex;
+  flex-direction: column; /* titre au-dessus de la carte */
+  align-items: center; /* centre le titre par rapport à la carte */
+}
+
+.today{
+    font-weight: bold;
+    font-size: larger;
+}
+
+.opening-hour__card {
+    width: 250px;
+    justify-content: center;
+    background-color: var(--background-color);
+    text-align: center;
+    line-height: 28px;
+    letter-spacing: 1px;
+    font-size: 1.2em;
+    padding: 16px;
+    box-shadow: 0 4px 8px var(--light-black);
+    border-radius: 12px;
+    color: var(--text-color);
+}
+
+.opening-hour__day {
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--lighter-grey); 
+}
+
+.other-day{
+    font-size: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.opening-hour__day:last-child{
+    border-bottom: none;
+}
+
+
+.map{
+    height: auto;
+}
+
+.contact__details{
+    text-align: center;
+    justify-content:center ;
+}
