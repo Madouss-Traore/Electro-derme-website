@@ -176,9 +176,15 @@ const faqs = [
 // MIDDLEWARE CASSE
 
 app.use((req, res, next) => {
-  req.url = req.url.toLowerCase();
+  let url = decodeURIComponent(req.url);  
+  url = url.normalize("NFD")               
+           .replace(/[\u0300-\u036f]/g, "") 
+           .toLowerCase();                  
+  req.url = url;
   next();
 });
+
+
 
 
 // ROUTES
