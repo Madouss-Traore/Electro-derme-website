@@ -37,3 +37,24 @@ const reviewsSwiper = new Swiper('.reviews', {
 
 });
 
+//FAQ
+
+const video = document.querySelector(".faq__video");
+const btn = document.querySelector(".video__button");
+
+btn.addEventListener("click", () => {
+  if (video.paused) {
+    video.play();
+    btn.textContent = "⏸"; 
+  } else {
+    video.pause();
+    btn.textContent = "▶";  
+  }
+});
+
+const faqs= document.querySelectorAll(".faq");
+faqs.forEach(faq=>{
+  faq.addEventListener("click", ()=>{
+    faq.classList.toggle("active")
+  })
+})
