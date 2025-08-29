@@ -11,11 +11,11 @@ const PORT = process.env.PORT || 3000;
 
 
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
+app.use(express.static(path.join(__dirname, 'public')));
 app.set("layout", "layout"); 
 
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.set("views", path.join(__dirname, "views"));
 
 app.use(expressLayouts);
 
@@ -177,11 +177,11 @@ const faqs = [
 // MIDDLEWARE CASSE
 
 app.use((req, res, next) => {
-  let url = decodeURIComponent(req.url);  
-  url = url.normalize("NFD")               
-           .replace(/[\u0300-\u036f]/g, "") 
-           .toLowerCase();                  
-  req.url = url;
+  if (!req.path.startsWith("/images") && !req.path.startsWith("/css") && !req.path.startsWith("/js")) {
+    let url = decodeURIComponent(req.url);
+    url = url.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    req.url = url;
+  }
   next();
 });
 
