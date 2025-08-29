@@ -53,3 +53,16 @@ new Swiper('.swiper-before-after', {
     
   });
 </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".navbar__hamburger");
+    const menu = document.querySelector(".navbar__list");
+
+    if (hamburger && menu) {
+      hamburger.addEventListener("click", function () {
+        menu.classList.toggle("active");
+      });
+    }
+  });
+</script>

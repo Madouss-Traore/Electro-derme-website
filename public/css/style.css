@@ -55,108 +55,89 @@ html, body{
   flex: 1; /* pousse le footer en bas */
 }
 
-
 /* NAVBAR */
 
 .navbar__container{
-    align-items:center ;
     background-color: var(--header-footer-bg);
-    height: 45px;
 }
 
-.navbar{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 44px;
-    padding:12px;
-    background-color: var(--color-bg);
+.navbar__list,
+.navbar__button-appointment {
+    display: none;
 }
 
-.navbar__list{
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    gap:2rem;
-    font-size: 16px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-weight: 400;
-    cursor: pointer;
-    padding-left: 12px;
-}
-
-.navbar__item:hover{
-    text-decoration: underline;
-    text-underline-offset: 3px;
-}
-
-.navbar__button-appointment{
-    align-items: center;
+.navbar__hamburger {
+    font-size: 28px;
+    background: none;
     border: none;
-    border-radius: 6px;
-    height:30px;
-    width: 130px;
-    background-color: var(--brown-darkest);
-    color: var(--text-on-dark);
-    font-size: 15px;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1px;
+    color: var(--text-color);
+    cursor: pointer;
 }
 
-.navbar__a {
+.navbar__list.active {
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    background-color: var(--greyish-beige);
+}
+
+.navbar__list li {
+    margin-bottom: 6px;
+}
+
+.navbar__item {
     display: block;
     padding: 10px 20px;
-
+    text-decoration: none;
+    color: var(--text-color);
 }
 
-
-/* HERO */
-
+/* HERO  */
 .hero {
-    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height:95vh;
+    height: 100vh;
     width: 100%;
     background-image: url(/assets/images/hero.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    min-height: 400px;
 }
 
-.hero__title, .hero__subtitle {
-    color: var(--text-on-dark);
-    letter-spacing: 1px;
-
+.hero__title,
+.hero__subtitle {
+  color: var(--text-on-dark);
+  letter-spacing: 1px;
+  text-align: center; 
 }
 
-.hero__title{
-    font-size: 5em;
-    font-weight: bold;
-    margin-top: 137px;
+.hero__title {
+  font-size: 2rem;    
+  font-weight: bold;
+  margin-top: 40px;
 }
 
-.hero__subtitle{
-    font-size: 2.5rem;
-    font-weight: lighter;
+.hero__subtitle {
+  font-size: 1.2rem;  
+  font-weight: lighter;
+  margin-top: 15px;
 }
 
-.hero__button{
-    margin-top: 50px;
-    border: none;
-    border-radius: 12px;
-    height:40px;
-    width: 200px;
-    background-color: var(--button-light);
-    font-size: 1em;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1px;
+.hero__button {
+  margin-top: 30px;
+  border: none;
+  border-radius: 12px;
+  height: 40px;
+  width: 160px;            
+  background-color: var(--button-light);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 
@@ -186,67 +167,70 @@ html, body{
 
 /* WELCOME */
 
-.welcoming__title, .journey__title,.before-after__title, .reviews__title, .electrolysis__main-title, .pricing__title, .faq__title, .contact__title {
 
-    color: var(--brown-dark);
-    margin: 44px 0 32px;
-    font-size: 36.8px;
-    text-align: center;
-    font-weight: bold;
-    letter-spacing: 1px;
+.welcoming__title,
+.journey__title,
+.before-after__title,
+.reviews__title,
+.electrolysis__main-title,
+.pricing__title,
+.faq__title,
+.contact__title {
+  color: var(--brown-dark);
+  margin: 24px 0 16px;
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .welcoming__briefing {
-    margin-left: 200px;
-    margin-right:200px;
-    margin-top:25px;
-    letter-spacing: 0.25px;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 28px;
-    text-align: center;
+  margin: 0 16px;
+  margin-top: 15px;
+  letter-spacing: 0.25px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center;
 }
 
 
 /* JOURNEY */
 
 .journey {
-    display: flex;
-    justify-content: center; 
-    align-items: center;         
-    margin: 150px 200px 0 200px; 
-    gap: 40px;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 16px 0 16px;
+  gap: 20px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
 }
 
 .journey__photo {
-    background-image: url(/assets/images/parcours.png);
-    width: 100%;
-    max-width: 400px;
-    aspect-ratio: 1 / 1;       
-    background-size: cover;
-    background-position: center;
+  background-image: url(/assets/images/parcours.png);
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 1 / 1;
+  background-size: cover;
+  background-position: center;
 }
 
-.journey__title{
+ .journey__title {
     text-align: left;
-    margin-top: 10px;
-}
+  }
+  .journey__text {
+    text-align: left;
+  }
+
 
 .journey__details {
     flex: 1; /* prend le reste de la place */
 }
 
-.journey__text {
-    text-align: left;
-    letter-spacing: 0.25px;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 28px;
-    margin: 0;               
-}
+
 .accent{
     font-weight: bold;
 }
@@ -255,17 +239,11 @@ html, body{
 /* SLOGAN */
 
 .slogan__container {
-    width: 100%; 
+    height: 65px;
     background-color: var(--slogan-bg);
-    height: 65px; 
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-    position: relative;
-    margin-top: 25px;
-    line-height: 33.25px;
-    overflow: hidden;
-}
+    margin-top: 20px;
+  }
+
 
 .slogan__text {
     display: flex;
@@ -285,20 +263,16 @@ html, body{
 
 /* AVANT/APRES */
 
- .before-after__title{
-  text-align: left;
-  margin: 30px 40px 32px;
-}
 
 .swiper {
-  width: 800px;
-  height: 450px;
+  width: 78%;
+  height: auto;
 }
 
 .swiper-slide{
     text-align: center;
     justify-content: center;
-    margin-bottom: px;
+    margin-bottom:20px;
     
 }
 
@@ -323,25 +297,24 @@ html, body{
 }
 
 .reviews__container{
-    height: 50vh;
-    margin: 40px auto;               
+    width: 80%;
+    margin: auto;               
     display: flex;
     flex-direction: row;
     text-align: center;
     align-items: center;
-    justify-content: flex-start;
-    height: 600px;
+    justify-content: center;
 }
 
 .reviews__title {
     display: flex;
     flex-direction: column;
-    font-size: 2rem;
-    font-weight: bold;
     letter-spacing: 1px;
     text-align: left;
-    margin-left: 55px;
+    margin-left: auto;
 }
+
+
 
 .reviews__row {
     display: flex;
@@ -350,6 +323,8 @@ html, body{
     align-items: center;          
     width: 100%;
 }
+
+
 
 .reviews__swiper-slide {
     display: flex;
@@ -362,15 +337,19 @@ html, body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 50px 50px;
+    height:55vh;
+    width: auto;
 }
 
 .review-card {
+    
     background:var(--bg-color);
     border-radius: 8px;
     box-shadow: 0 2px 2px var(--box-shadow);
     padding: 16px;
     text-align: center;
-    height: 300px;
+    justify-content: center;
 }
 
 .review-rating {
@@ -380,7 +359,7 @@ html, body{
 }
 
 .review-comment {
-    width: 80%;
+   
     font-size: 1rem;
     margin-bottom: 12px;
     letter-spacing: 1px;
@@ -391,6 +370,7 @@ html, body{
     font-weight: bold;
     color:var(--accent-color);
 }
+
 
 
 /* ELECTROLYSIS */
@@ -580,8 +560,6 @@ svg{
 }
 
 
-
-
 @keyframes fade{
     from{
         opacity: 0;
@@ -604,12 +582,14 @@ svg{
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
+
 
 .contact-info a {
     color:var(--subtitle-color);
     text-decoration: none;
+    font-size: 1rem;
 }
 
 .contact-info a:hover {
@@ -617,27 +597,26 @@ svg{
 }
 
 .opening-hour__title{
-
-  margin-bottom: 16px;
-  color: var(--brown-darkest);
-  font-size: 24px;
-  font-weight: bold;
-  text-align:center;
+    margin-bottom: 16px;
+    color: var(--brown-darkest);
+    font-size: 20px;
+    font-weight: bold;
+    text-align:center;
 }
 
 .contact__container{
     display: flex;
-    /* flex-direction: row; */
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    gap: 32px;
+    align-items: center;
+    gap: 20px;
 }
 
 
 .opening-hours-block {
-  display: flex;
-  flex-direction: column; /* titre au-dessus de la carte */
-  align-items: center; /* centre le titre par rapport à la carte */
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
 }
 
 .today{
@@ -646,7 +625,7 @@ svg{
 }
 
 .opening-hour__card {
-    width: 250px;
+    width: 150%;
     justify-content: center;
     background-color: var(--background-color);
     text-align: center;
@@ -669,6 +648,7 @@ svg{
     margin-bottom: 6px;
     padding: 8px 0;
     border-bottom: 1px solid var(--lighter-grey); 
+    font-size: 20px;
 }
 
 .other-day{
@@ -683,8 +663,10 @@ svg{
 }
 
 
+
 .map{
     height: auto;
+    margin: 0 44px;
 }
 
 .contact__details{
@@ -722,4 +704,208 @@ svg{
     margin-top: 16px;
     font-size: 1.8em;
     text-decoration: underline;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+/* TABLETTE & DESKTOP */
+
+@media (min-width: 806px) {
+  .navbar__hamburger {
+    display: none;
+  }
+ /* NAVBAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+}
+
+
+  .navbar__list {
+    display: flex !important;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar__list li {
+    margin: 0;
+  }
+
+  .navbar__item {
+    text-decoration: none;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+  }
+  .navbar__item:hover{
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+
+.navbar__button-appointment {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--brown-darkest);
+    color: var(--text-on-dark);
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    }
+
+/* HERO */
+
+.hero__title, .hero__subtitle {
+    color: var(--white);
+    letter-spacing: 1px;
+
+}
+
+.hero__title{
+    font-size: 5em;
+    font-weight: bold;
+    margin-top: 137px;
+}
+
+.hero__subtitle{
+    font-size: 2.5rem;
+    font-weight: lighter;
+    
+}
+
+.hero__button{
+    margin-top: 50px;
+    height:40px;
+    width: 200px;
+    background-color: var(--beige-light);
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+}
+
+/* WELCOME */
+
+.welcoming__title, 
+.journey__title,
+.before-after__title, 
+.reviews__title,
+.electrolysis__main-title, 
+.pricing__title, .faq__title, 
+.contact__title {
+
+    color: var(--brown-dark);
+    margin: 44px 0 32px;
+    font-size: 36.8px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.welcoming__briefing {
+    margin-left: 200px;
+    margin-right:200px;
+    margin-top:25px;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+}
+
+/* JOURNEY */
+
+.journey {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;         
+    margin: 150px 200px 0 200px; 
+    gap: 40px;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.journey__photo {
+    max-width: 400px;
+    aspect-ratio: 1 / 1;       
+}
+
+.journey__title{
+    margin-top: 10px;
+    text-align: left;
+}
+
+.journey__text {
+    letter-spacing: 0.25px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 0;               
+}
+/* SLOGAN */
+
+.slogan__container {
+    width: 100%; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    position: relative;
+    margin-top: 25px;
+    line-height: 33.25px;
+    overflow: hidden;
+}
+ /* AVANT/APRES */
+
+.before-after__title{
+    text-align: left;
+    margin: 30px 40px 32px;
+}
+
+/* REVIEWS */
+
+.reviews__title {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.swiper .swiper-slide .review-card{
+    width: 200px;
+    height: 550px;
+}
+
+/* CONTACT */
+
+.contact-info {
+    margin-bottom: 40px;
+}
+
+.contact__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.opening-hour__title{
+    font-size: 24px;
+}
+
+.opening-hour__day {
+    font-size: 22px;
+}
+
 }
