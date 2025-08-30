@@ -25,6 +25,7 @@
     --faq-answers:var(--greyish-beige);
     --table-shadow:var(--light-black);
     --background-color:var(--white);
+    --separator:var(--greyish-beige)
 }
 
 @keyframes moveRightToLeft {
@@ -195,6 +196,13 @@ html, body{
 }
 
 
+hr {
+  border: none;
+  height: 3px;
+  background: var(--separator);
+  margin: 70px 0 70px 0 ;
+}
+
 /* JOURNEY */
 
 .journey {
@@ -202,7 +210,7 @@ html, body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 40px 16px 0 16px;
+  margin: 20px 16px 0 16px;
   gap: 20px;
   font-size: 1rem;
   font-weight: 400;
@@ -210,7 +218,7 @@ html, body{
 }
 
 .journey__photo {
-  background-image: url(/assets/images/parcours.png);
+  background-image: url(/assets/images/parcours.jpeg);
   width: 100%;
   max-width: 320px;
   aspect-ratio: 1 / 1;
@@ -241,7 +249,7 @@ html, body{
 .slogan__container {
     height: 65px;
     background-color: var(--slogan-bg);
-    margin-top: 20px;
+    margin: 70px 0;
   }
 
 
@@ -376,7 +384,7 @@ html, body{
 /* ELECTROLYSIS */
 
 .electrolysis__container{
-    margin: 0px 100px 0px;
+    margin: 0px 45px 0px;
 }
 
 .electrolysis__subtitle{
