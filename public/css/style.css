@@ -654,7 +654,7 @@ svg{
 }
 
 .opening-hour__card {
-    width: 100%;
+    width: 150%;
     justify-content: center;
     background-color: var(--background-color);
     text-align: center;
