@@ -24,6 +24,7 @@
     --light-info:var(--light-grey);
     --faq-answers:var(--greyish-beige);
     --table-shadow:var(--light-black);
+    --table-color:var(--greyish-beige);
     --background-color:var(--white);
     --separator:var(--greyish-beige)
 }
@@ -440,6 +441,10 @@ hr {
     margin-bottom: 3rem;
 }
 
+.pricing__table tbody tr:nth-child(odd) {
+  background-color: var(--table-color); /* blanc */
+}
+
 .princing__table-header {
   font-weight: bold;
   padding: 0.75rem 0;
@@ -454,15 +459,22 @@ hr {
 }
 
 .pricing__table td {
-  padding: 1rem 0;
+  padding: 16px 12px;
   border-bottom: .5px solid var(--accent-color); 
 }
+
+.session__label{
+ font-size: 0.9em;
+}
+
+
+
 
 .pricing__table tbody tr:last-child td {
   border-bottom: none; 
 }
 
-.alignr {
+.alignr{
   text-align: end;
 }
 
@@ -485,6 +497,7 @@ hr {
     padding-top: 6px;
     font-size: 14px;
 }
+
 
 
 /* FAQ */

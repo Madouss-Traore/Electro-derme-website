@@ -44,7 +44,13 @@
     <tbody>
       <% sessions.forEach(session => { %>
         <tr>
-          <td class="row__width alignl"><%= session.durationDisplayed %></td>
+          <div>
+            <td class="row__width alignl">
+              <div class="session__label"> Prestation de :</div>
+              <div class="session__duration"><%= session.durationDisplayed %></div>
+          </td>
+          </div>
+          
           <td class="row__width">
             <div class="pricing__session-price alignr"><%= session.price %></div>
             <div class="pricing__session-note alignr">Durée totale : <%= session.total %></div>
