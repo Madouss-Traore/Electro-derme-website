@@ -49,6 +49,7 @@ body {
 html, body{
     height: 100%;
     margin: 0;
+    overflow-x: hidden;
 }
 
 /* CONTENT  */
@@ -653,7 +654,7 @@ svg{
 }
 
 .opening-hour__card {
-    width: 150%;
+    width: 100%;
     justify-content: center;
     background-color: var(--background-color);
     text-align: center;
