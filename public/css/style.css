@@ -220,6 +220,7 @@ hr {
 .journey__photo {
   background-image: url(/assets/images/parcours.jpeg);
   width: 100%;
+  height: 550px;
   max-width: 320px;
   aspect-ratio: 1 / 1;
   background-size: cover;
@@ -389,7 +390,7 @@ hr {
 
 .electrolysis__subtitle{
     color: var(--subtitle-color);
-    font-size: 30px;
+    font-size: 1.7rem;
     margin-bottom: 30px;
     margin-top: 30px;
     letter-spacing: 1px;
@@ -542,6 +543,7 @@ hr {
 
 .faq__question h3{
     font-size: 1.8rem;
+    padding-left: 10px;
 }
 
 .svg path{
@@ -556,6 +558,7 @@ svg{
 }
 
 .faq__answer{
+    
     max-height: 0;
     overflow: hidden;
     transition: max-height 1.4s ease;
@@ -565,6 +568,10 @@ svg{
 .faq.active .faq__answer{
     max-height:600px;
     animation: fade 1s ease-in-out;
+}
+
+.faq__answer-content{
+    padding: 10px 10px 20px;
 }
 
 

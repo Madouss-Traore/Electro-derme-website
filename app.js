@@ -131,7 +131,9 @@ const faqs = [
         <li>• Lèvres supérieures</li>
         <li>• Aréoles</li>
         <li>• Maillot</li>
-        <li>• Ventre…</li>
+        <li>• Poitrine</li>
+        <li>• Cou</li>
+        <li>• Ventre …</li>
       </ul>
     `
   },
