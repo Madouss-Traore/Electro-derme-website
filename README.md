@@ -5,7 +5,7 @@ Développé avec **Node.js**, **Express** et **EJS**, il présente essentielleme
 
 ---
 
-##  Fonctionnalités principales
+## Fonctionnalités principales
 -  Navigation fluide avec un design responsive (HTML5 / CSS3)  
 -  Section **Avant / Après** animée avec **Swiper.js**  
 -  Section **Avis clients** dynamique alimentée par le serveur  
@@ -14,7 +14,7 @@ Développé avec **Node.js**, **Express** et **EJS**, il présente essentielleme
 
 ---
 
-## 🛠️ Stack technique
+## Stack technique
 - **Back-end :** Node.js + Express  
 - **Template engine :** EJS  
 - **Front-end :** HTML5, CSS3, Swiper.js 
@@ -23,5 +23,8 @@ Développé avec **Node.js**, **Express** et **EJS**, il présente essentielleme
 
 ---
 Le site sera accessible à l’adresse : http://electroderme.fr/
+
+ci dessous un exemple de mockup proposé a la cliente:
+<img width="1812" height="4633" alt="épuré" src="https://github.com/user-attachments/assets/d21308ec-260d-40fc-8d0d-9990fee9f296" />
 
 
